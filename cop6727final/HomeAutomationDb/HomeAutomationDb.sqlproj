@@ -67,6 +67,7 @@
     <Build Include="Schema\Room.sql" />
     <Build Include="Schema\RoomSchedule.sql" />
     <Build Include="Schema\RoomSensor.sql" />
+    <Build Include="Schema\Building.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="HomeAutomationDb.refactorlog" />

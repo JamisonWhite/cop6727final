@@ -1,18 +1,18 @@
 ﻿CREATE TABLE [dbo].[RoomSensor]
 (
-	[RoomName] NVARCHAR(50) NOT NULL , 
+	[RoomId] INT NOT NULL , 
     [SensorDate] DATETIME NOT NULL, 
     [Occupied] BIT NOT NULL, 
     [Temperature] DECIMAL NOT NULL, 
-    PRIMARY KEY ([SensorDate], [RoomName]), 
-    CONSTRAINT [FK_RoomSensor_Room] FOREIGN KEY ([RoomName]) REFERENCES [Room]([Name])
+    PRIMARY KEY ([SensorDate], [RoomId]), 
+    CONSTRAINT [FK_RoomSensor_Room] FOREIGN KEY ([RoomId]) REFERENCES [Room]([Id])
 )
 
 GO
 
 CREATE TRIGGER [dbo].[Trigger_RoomSensor]
     ON [dbo].[RoomSensor]
-    FOR INSERT, UPDATE
+    FOR INSERT
     AS
     BEGIN
         SET NoCount ON

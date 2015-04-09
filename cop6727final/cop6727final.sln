@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "cop6727final", "cop6727final\cop6727final.sqlproj", "{9AC07536-80B7-4654-A082-09B2E4CF62A7}"
-EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "HomeAutomationDb", "HomeAutomationDb\HomeAutomationDb.sqlproj", "{CF842F29-6A31-487F-89FE-24DC031A8075}"
 EndProject
 Global
@@ -13,12 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9AC07536-80B7-4654-A082-09B2E4CF62A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9AC07536-80B7-4654-A082-09B2E4CF62A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9AC07536-80B7-4654-A082-09B2E4CF62A7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{9AC07536-80B7-4654-A082-09B2E4CF62A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9AC07536-80B7-4654-A082-09B2E4CF62A7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9AC07536-80B7-4654-A082-09B2E4CF62A7}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{CF842F29-6A31-487F-89FE-24DC031A8075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CF842F29-6A31-487F-89FE-24DC031A8075}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF842F29-6A31-487F-89FE-24DC031A8075}.Debug|Any CPU.Deploy.0 = Debug|Any CPU

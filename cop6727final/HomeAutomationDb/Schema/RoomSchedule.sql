@@ -1,14 +1,14 @@
 ﻿CREATE TABLE [dbo].[RoomSchedule]
 (
-	[RoomName] NVARCHAR(50) NOT NULL , 
+	[RoomId] INT NOT NULL , 
     [DayOfWeek] SMALLINT NOT NULL, 
     [StartTime] TIME NOT NULL, 
     [EndTime] TIME NOT NULL, 
     [OccupiedTemperature] DECIMAL NOT NULL, 
     [UnoccupiedTemperature] DECIMAL NOT NULL, 
-    PRIMARY KEY ([RoomName], [StartTime], [DayOfWeek]), 
+    PRIMARY KEY ([RoomId], [StartTime], [DayOfWeek]), 
     CONSTRAINT [CK_RoomSchedule_EndTime] CHECK (EndTime > StartTime), 
-    CONSTRAINT [FK_RoomSchedule_Room] FOREIGN KEY ([RoomName]) REFERENCES [Room]([Name])
+    CONSTRAINT [FK_RoomSchedule_Room] FOREIGN KEY ([RoomId]) REFERENCES [Room]([Id])
 )
 
 GO

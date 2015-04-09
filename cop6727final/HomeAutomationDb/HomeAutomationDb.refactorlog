@@ -21,4 +21,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="RoomName" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="2c96ce27-f019-4ee0-8314-151a42ce9778" ChangeDateTime="04/09/2015 01:40:10">
+    <Property Name="ElementName" Value="[dbo].[RoomSchedule].[RoomName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[RoomSchedule]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="RoomId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="dac032fe-e47e-4577-878b-01f44a1b90e8" ChangeDateTime="04/09/2015 01:40:33">
+    <Property Name="ElementName" Value="[dbo].[RoomSensor].[RoomName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[RoomSensor]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="RoomId" />
+  </Operation>
 </Operations>
