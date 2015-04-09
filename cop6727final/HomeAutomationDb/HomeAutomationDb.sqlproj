@@ -68,8 +68,15 @@
     <Build Include="Schema\RoomSchedule.sql" />
     <Build Include="Schema\RoomSensor.sql" />
     <Build Include="Schema\Building.sql" />
+    <None Include="Scripts\sampledata.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="HomeAutomationDb.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HomeAutomationDb.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment1.sql" />
   </ItemGroup>
 </Project>
