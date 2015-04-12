@@ -24,6 +24,7 @@
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <DefaultFilegroup>User</DefaultFilegroup>
+    <GenerateCreateScript>True</GenerateCreateScript>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -58,16 +59,16 @@
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="Schema" />
+    <Folder Include="Tables" />
     <Folder Include="Scripts" />
     <Folder Include="Storage" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Storage\User.sql" />
-    <Build Include="Schema\Room.sql" />
-    <Build Include="Schema\RoomSchedule.sql" />
-    <Build Include="Schema\RoomSensor.sql" />
-    <Build Include="Schema\Building.sql" />
+    <Build Include="Tables\Room.sql" />
+    <Build Include="Tables\RoomSchedule.sql" />
+    <Build Include="Tables\RoomSensor.sql" />
+    <Build Include="Tables\Building.sql" />
     <None Include="Scripts\sampledata.sql" />
   </ItemGroup>
   <ItemGroup>
