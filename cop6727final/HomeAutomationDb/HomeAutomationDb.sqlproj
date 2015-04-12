@@ -66,10 +66,11 @@
   <ItemGroup>
     <Build Include="Storage\User.sql" />
     <Build Include="Tables\Room.sql" />
-    <Build Include="Tables\RoomSchedule.sql" />
+    <Build Include="Tables\PolicySchedule.sql" />
     <Build Include="Tables\RoomSensor.sql" />
     <Build Include="Tables\Building.sql" />
     <None Include="Scripts\sampledata.sql" />
+    <Build Include="Tables\Policy.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="HomeAutomationDb.refactorlog" />

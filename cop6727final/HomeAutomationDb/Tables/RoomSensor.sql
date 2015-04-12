@@ -24,8 +24,9 @@ CREATE TRIGGER [dbo].[Trigger_RoomSensor]
 		Temperature = i.Temperature,
 		TargetTemperature = ISNULL( case when i.Occupied = 1 then s.OccupiedTemperature else s.UnoccupiedTemperature end, Room.DefaultTemperature)
 		FROM inserted as i
-		LEFT JOIN RoomSchedule AS s ON 
-				i.RoomId = s.RoomId 
+		JOIN Room as r on i.RoomId = r.Id
+		LEFT JOIN PolicySchedule AS s ON 
+				r.PolicyId = s.PolicyId 
 			and cast(i.SensorDate as Time) between s.StartTime and s.EndTime
 			and DATEPART(DW, i.SensorDate) = s.DayOfWeek
 		WHERE Room.Id = i.RoomId
