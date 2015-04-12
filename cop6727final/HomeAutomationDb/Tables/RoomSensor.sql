@@ -20,20 +20,20 @@ CREATE TRIGGER [dbo].[Trigger_RoomSensor]
 		--TODO Update Room.TargetTemperature
 
 		UPDATE Room SET 
-		Occupied = i.Occupied,
-		Temperature = i.Temperature,
-		TargetTemperature = ISNULL( case when i.Occupied = 1 then s.OccupiedTemperature else s.UnoccupiedTemperature end, Room.DefaultTemperature)
-		FROM inserted as i
-		JOIN Room as r on i.RoomId = r.Id
-		LEFT JOIN PolicySchedule AS s ON 
-				r.PolicyId = s.PolicyId 
-			and cast(i.SensorDate as Time) between s.StartTime and s.EndTime
-			and DATEPART(DW, i.SensorDate) = s.DayOfWeek
-		WHERE Room.Id = i.RoomId
+		Occupied = inserted.Occupied,
+		Temperature = inserted.Temperature,
+		TargetTemperature = 
+		ISNULL((
+				SELECT  case when inserted.Occupied = 1 then PolicySchedule.OccupiedTemperature else PolicySchedule.UnoccupiedTemperature end
+				FROM   PolicySchedule
+				WHERE  Room.PolicyId = PolicySchedule.PolicyId
+				AND CAST(inserted.SensorDate as Time) BETWEEN PolicySchedule.StartTime AND PolicySchedule.EndTime
+				AND DATEPART(DW, inserted.SensorDate) = PolicySchedule.DayOfWeek
+			)
+			, Room.DefaultTemperature)
 
-
-
-
+		FROM inserted
+		JOIN Room on inserted.RoomId = Room.Id
 
     END
 GO
