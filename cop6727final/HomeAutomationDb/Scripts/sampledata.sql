@@ -26,8 +26,4 @@ INSERT INTO Room(Id, Name, BuildingId, DefaultTemperature) VALUES (2, 'Kitchen',
 INSERT INTO Room(Id, Name, BuildingId, DefaultTemperature) VALUES (3, 'Bedroom', 1, 80);
 INSERT INTO Room(Id, Name, BuildingId, DefaultTemperature) VALUES (4, 'Bathroom', 1, 80);
 
-INSERT INTO RoomSensor(RoomId, SensorDate, Occupied, Temperature) VALUES (1, getdate(), 1, 75);
-INSERT INTO RoomSensor(RoomId, SensorDate, Occupied, Temperature) VALUES (2, getdate(), 0, 75);
-INSERT INTO RoomSensor(RoomId, SensorDate, Occupied, Temperature) VALUES (3, getdate(), 0, 75);
-INSERT INTO RoomSensor(RoomId, SensorDate, Occupied, Temperature) VALUES (4, getdate(), 0, 75);
-
+exec GenerateRandomRoomSensor 7

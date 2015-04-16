@@ -16,9 +16,6 @@ CREATE TRIGGER [dbo].[Trigger_RoomSensor]
     AS
     BEGIN
         SET NoCount ON
-
-		--TODO Update Room.TargetTemperature
-
 		UPDATE Room SET 
 		Occupied = inserted.Occupied,
 		Temperature = inserted.Temperature,
