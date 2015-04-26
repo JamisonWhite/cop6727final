@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="HomeAutomationDb.publish.xml" />
+    <None Include="dev.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />

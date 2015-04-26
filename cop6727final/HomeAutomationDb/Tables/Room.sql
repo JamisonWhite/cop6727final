@@ -5,7 +5,7 @@
     [BuildingId] INT NOT NULL,  
     [PolicyId] INT NULL,  
     [DefaultTemperature] DECIMAL NOT NULL, 
-    [Occupied] BIT NOT NULL DEFAULT 0, 
+    [Occupied] BIT NOT NULL CONSTRAINT DF_Room_Occupied DEFAULT 0, 
     [Temperature] DECIMAL NULL, 
     [TargetTemperature] DECIMAL NULL, 
     PRIMARY KEY ([Id]), 
