@@ -5,6 +5,11 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "HomeAutomationDb", "HomeAutomationDb\HomeAutomationDb.sqlproj", "{CF842F29-6A31-487F-89FE-24DC031A8075}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Final Submission", "Final Submission", "{4C1AEE77-4C3A-4DB3-BD6A-F05CA1E10441}"
+	ProjectSection(SolutionItems) = preProject
+		FinalSubmission\HomeAutomationDb_1.publish.sql = FinalSubmission\HomeAutomationDb_1.publish.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
